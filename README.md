@@ -1,1 +1,1 @@
-# GANs
+# Triple GANs

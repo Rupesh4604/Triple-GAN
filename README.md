@@ -19,11 +19,12 @@ generation of data samples and also a better framework to work with as it requir
 less number of epochs to train, can perform well even without data argumentation
 and can perform semi-supervised learning(SSL) tasks better.
 
-# Triple GAN for Image Generation and Classification  
+### **Triple GAN Architecture**  
+![Triple GAN Architecture](triple%20gan.png) 
 
 This repository contains an implementation of **Triple GAN**, a generative adversarial network designed to simultaneously improve image generation and classification through a joint training approach.  
 
-## 📌 Overview  
+## Overview  
 
 Triple GAN consists of three networks:  
 1. **Generator (G)** - Generates realistic images from latent vectors.  
@@ -32,28 +33,23 @@ Triple GAN consists of three networks:
 
 By balancing the adversarial loss and classification loss, Triple GAN achieves **better sample generation** and **more robust classification** than conventional GANs.  
 
-## 🔢 Mathematical Formulation  
+## Mathematical Formulation  
 
 The optimization objective of Triple GAN is formulated as:  
 
-\[
+$$
 \min_{C,G} \max_D E_{p(x,y)} [\log D(x, y)] + \alpha E_{p_c(x,y)} [\log(1 - D(x, y))] + (1 - \alpha) E_{p_g(x,y)} [\log(1 - D(G(y, z), y))]
-\]
+$$
 
-\[
-\begin{align*}
-   \min_{C,G} \max_D & \ E_{p(x,y)}[\log D(x,y)] + \alpha E_{p_c(x,y)}[\log(1-D(x,y))] \\
-& + (1-\alpha) E_{p_g(x,y)}[\log(1-D(G(y,z),y))]
-\end{align*}
-\]
-
+where:
 where:  
-- \( p(x, y) \) represents the true data distribution,  
-- \( p_c(x, y) \) is the classifier-based sample distribution,  
-- \( p_g(x, y) \) is the generator-based sample distribution,  
-- \( \alpha \) is a balancing parameter.  
+- $p(x, y)$ represents the true data distribution,  
+- $p_c(x, y)$ is the classifier-based sample distribution,  
+- $p_g(x, y)$ is the generator-based sample distribution,  
+- $\alpha$ is a balancing parameter.
 
-## 📦 Dependencies  
+
+## Dependencies  
 
 Ensure you have the following installed:  
 - Python 3.x  
@@ -68,12 +64,12 @@ Install dependencies using:
 pip install tensorflow numpy matplotlib pandas jupyter
 ```
 
-## 🚀 Usage  
+## Usage  
 
 1. **Clone the repository:**  
    ```bash
-   git clone https://github.com/your-username/triple-gan.git
-   cd triple-gan
+   https://github.com/Rupesh4604/Triple-GAN.git
+   cd Triple-GAN-notebook
    ```  
 2. **Open the Jupyter Notebook:**  
    ```bash
@@ -81,27 +77,23 @@ pip install tensorflow numpy matplotlib pandas jupyter
    ```  
 3. **Run the notebook** to train the Triple GAN model and visualize the results.  
 
-## 📊 Results & Visualizations  
+## Architecture
 
-The following images illustrate key components of the Triple GAN model:  
+![](mnist%20architecture.png)
 
-### **1. Triple GAN Architecture**  
-![Triple GAN Architecture](images/triple_gan_architecture.png)  
+## Loss  
+![Loss Functions](loss.png)  
 
-### **2. Loss Functions of Networks**  
-![Loss Functions](images/loss_functions.png)  
+<!-- 
+### **2. Loss**  
+![Loss Functions](loss.png)  
 
 ### **3. Generated Outputs on MNIST**  
-![MNIST Output](images/mnist_output.png)  
+![MNIST Output](mnist_8490.png)  
+-->
 
-## ✅ Features  
-✔️ Joint training of Generator, Discriminator, and Classifier  
-✔️ Improved classification with adversarial learning  
-✔️ Generates high-quality images with labeled outputs  
-
-## 📜 License  
+## License  
 This project is licensed under the **MIT License**.  
 
-### ✉️ Contact  
+### Contact  
 For queries or contributions, contact: **rupesh32003@gmail.com**  
-```

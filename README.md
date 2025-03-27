@@ -92,6 +92,23 @@ pip install tensorflow numpy matplotlib pandas jupyter
 ![MNIST Output](mnist_8490.png)  
 -->
 
+## Citation
+
+```bibtex
+@article{DBLP:journals/corr/LiXZZ17,
+  author    = {Chongxuan Li and Kun Xu and Jun Zhu and Bo Zhang},
+  title     = {Triple Generative Adversarial Nets},
+  journal   = {CoRR},
+  volume    = {abs/1703.02291},
+  year      = {2017},
+  url       = {[http://arxiv.org/abs/1703.02291](http://arxiv.org/abs/1703.02291)},
+  eprinttype = {arXiv},
+  eprint    = {1703.02291},
+  timestamp = {Thu, 17 Sep 2020 17:45:41 +0200},
+  biburl    = {[https://dblp.org/rec/journals/corr/LiXZZ17.bib](https://dblp.org/rec/journals/corr/LiXZZ17.bib)},
+  bibsource = {dblp computer science bibliography, [https://dblp.org](https://dblp.org)}
+}
+```
 ## License  
 This project is licensed under the **MIT License**.  
 
